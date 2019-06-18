@@ -3,9 +3,9 @@ import {computed} from '@ember/object';
 
 export default DS.JSONAPIAdapter.extend({
 	headers: computed(function() {
-		alert("Called this");
+		alert("Called this brpoken");
 		return {
-			'content-type':'application/json',
+			'Content-Type':'application/json',
 			'x-access-token':'TOKENHERE'
 		}
 	})

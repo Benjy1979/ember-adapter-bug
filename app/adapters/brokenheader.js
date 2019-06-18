@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import {computed} from '@ember/object';
 
 export default DS.JSONAPIAdapter.extend({
 	host: function() { 
@@ -9,6 +10,7 @@ export default DS.JSONAPIAdapter.extend({
 	}.property(),
 
 	headers: computed(function() {
+		alert("hit");
 		return  {
 			'Content-Type': 'application/json',
 			'x-access-token': 'exampletokenabc123'
